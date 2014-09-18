@@ -1,0 +1,9 @@
+---
+- name: Configure the Docker APT key
+  apt_key: url=https://get.docker.io/gpg state=present
+
+- name: Configure the Docker APT repository
+  apt_repository: repo="deb https://get.docker.io/ubuntu docker main" state=present
+
+- name: Install Docker
+  apt: pkg=lxc-docker-{{ docker_version }}={{ docker_version }} state=present
