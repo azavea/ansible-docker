@@ -7,3 +7,8 @@
 
 - name: Install Docker
   apt: pkg=lxc-docker-{{ docker_version }}={{ docker_version }} state=present
+
+- name: Configure Docker
+  template: src=docker.j2 dest=/etc/default/docker
+  notify:
+    - Restart Docker
