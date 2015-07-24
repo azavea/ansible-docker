@@ -1,12 +1,16 @@
 ---
 - name: Configure the Docker APT key
-  apt_key: url=https://get.docker.io/gpg state=present
+  apt_key: url=https://get.docker.io/gpg
+           keyserver=p80.pool.sks-keyservers.net
+           id=58118E89F3A912897C070ADBF76221572C52609D
+           state=present
 
 - name: Configure the Docker APT repository
-  apt_repository: repo="deb https://get.docker.io/ubuntu docker main" state=present
+  apt_repository: repo="deb https://apt.dockerproject.org/repo {{ ansible_distribution|lower }}-{{ ansible_distribution_release }} main"
+                  state=present
 
 - name: Install Docker
-  apt: pkg=lxc-docker-{{ docker_version }}={{ docker_version }} state=present
+  apt: pkg=docker-engine={{ docker_version }} state=present
 
 - name: Configure Docker
   template: src=docker.j2 dest=/etc/default/docker
