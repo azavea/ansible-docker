@@ -1,13 +1,20 @@
 ---
 - name: Configure the Docker APT key
-  apt_key: url=https://get.docker.io/gpg
-           keyserver=p80.pool.sks-keyservers.net
+  apt_key: keyserver=p80.pool.sks-keyservers.net
            id=58118E89F3A912897C070ADBF76221572C52609D
            state=present
 
 - name: Configure the Docker APT repository
   apt_repository: repo="deb https://apt.dockerproject.org/repo {{ ansible_distribution|lower }}-{{ ansible_distribution_release }} main"
                   state=present
+
+- name: Install AUFS dependencies
+  apt: pkg={{ item }} state=present
+  with_items:
+    - linux-image-extra-{{ ansible_kernel }}
+    - linux-image-extra-virtual
+    - aufs-tools
+  when: docker_options | search("--storage-driver=aufs")
 
 - name: Install Docker
   apt: pkg=docker-engine={{ docker_version }} state=present
