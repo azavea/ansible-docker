@@ -1,3 +1,9 @@
+## 1.0.0
+
+- Use new `dockerproject.org` APT repository. Ensure that `lxc-docker*` is
+  pruged before applying this role.
+- Set default storage driver to `aufs`.
+
 ## 0.2.0
 
 - Ensure Docker API client for Python is installed as part of the role.
