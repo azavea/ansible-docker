@@ -8,6 +8,14 @@
   apt_repository: repo="deb https://apt.dockerproject.org/repo {{ ansible_distribution|lower }}-{{ ansible_distribution_release }} main"
                   state=present
 
+- name: Install AUFS dependencies
+  apt: pkg={{ item }} state=present
+  with_items:
+    - linux-image-extra-{{ ansible_kernel }}
+    - linux-image-extra-virtual
+    - aufs-tools
+  when: docker_options | search("--storage-driver=aufs")
+
 - name: Install Docker
   apt: pkg=docker-engine={{ docker_version }} state=present
 
