@@ -1,3 +1,7 @@
+## 1.0.1
+
+- Use port `80` for retrieving APT repository key.
+
 ## 1.0.0
 
 - Use new `dockerproject.org` APT repository. Ensure that `lxc-docker*` is
