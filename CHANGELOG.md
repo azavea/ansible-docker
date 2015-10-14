@@ -1,3 +1,7 @@
+## 1.0.2
+
+- Switch APT repository key server to `pgp.mit.edu`.
+
 ## 1.0.1
 
 - Use port `80` for retrieving APT repository key.
