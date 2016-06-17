@@ -1,7 +1,7 @@
 ---
 - name: Configure the Docker APT key
-  apt_key: keyserver=hkp://pgp.mit.edu:80
-           id=58118E89F3A912897C070ADBF76221572C52609D
+  apt_key: keyserver="{{ docker_keyserver }}"
+           id="58118E89F3A912897C070ADBF76221572C52609D"
            state=present
 
 - name: Configure the Docker APT repository
