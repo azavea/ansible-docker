@@ -1,3 +1,10 @@
+## 2.0.0
+
+- Add `docker_keyserver` variable so that users can provide a custom key server
+  URI.
+- Bump Docker Engine and `docker-py` versions.
+- Remove AUFS as the default storage engine.
+
 ## 1.0.2
 
 - Switch APT repository key server to `pgp.mit.edu`.
