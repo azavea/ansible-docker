@@ -13,4 +13,6 @@ galaxy_info:
   - development
   - system
 dependencies:
-  - { role: "azavea.pip" }
+  - src: azavea.pip
+    version: 0.1.0
+    name: azavea.pip

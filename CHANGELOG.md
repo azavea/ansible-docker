@@ -1,3 +1,6 @@
+## 2.0.1
+- Update dependency role spec format
+
 ## 2.0.0
 
 - Add `docker_keyserver` variable so that users can provide a custom key server
