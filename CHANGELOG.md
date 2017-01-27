@@ -1,4 +1,10 @@
+## 2.2.0
+
+- Update default Docker Engine version to 1.12.*.
+- Update default Docker SDK for Python to 1.10.6.
+
 ## 2.0.1
+
 - Update dependency role spec format
 
 ## 2.0.0
