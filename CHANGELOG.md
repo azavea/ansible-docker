@@ -1,3 +1,7 @@
+## 3.0.0
+
+- Remove `docker-py` module installation.
+
 ## 2.2.0
 
 - Update default Docker Engine version to 1.12.*.
