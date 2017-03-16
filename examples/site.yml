@@ -10,7 +10,5 @@
 
   tasks:
     - name: Bring up a test container
-      docker:
-        name: test
-        image: busybox
-        state: started
+      command: docker run busybox sh
+      become: yes
