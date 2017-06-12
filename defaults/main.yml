@@ -1,4 +1,5 @@
 ---
-docker_version: "1.12.*"
+docker_package_name: "docker-ce"
+docker_version: "17.*"
 docker_options: ""
-docker_keyserver: "hkp://p80.pool.sks-keyservers.net:80"
+docker_repository_url: "https://download.docker.com/linux/{{ ansible_distribution | lower }}"

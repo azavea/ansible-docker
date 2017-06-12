@@ -12,7 +12,4 @@ galaxy_info:
   categories:
   - development
   - system
-dependencies:
-  - src: azavea.pip
-    version: 1.0.0
-    name: azavea.pip
+dependencies: []
