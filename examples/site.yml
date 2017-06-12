@@ -6,6 +6,7 @@
       apt: update_cache=yes
 
   roles:
+    - { role: "azavea.python-security", when: 'ansible_python_version | version_compare("2.7.9", "<")' }
     - { role: "azavea.docker" }
 
   tasks:
