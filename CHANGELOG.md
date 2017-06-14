@@ -1,3 +1,7 @@
+## 4.0.0
+
+- Add support for Docker Community Edition; includes several breaking changes.
+
 ## 3.0.0
 
 - Remove `docker-py` module installation.
