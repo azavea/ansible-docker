@@ -2,4 +2,3 @@
 docker_package_name: "docker-ce"
 docker_version: "17.*"
 docker_options: ""
-docker_repository_url: "https://download.docker.com/linux/{{ ansible_distribution | lower }}"

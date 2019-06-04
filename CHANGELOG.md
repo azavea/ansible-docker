@@ -1,3 +1,7 @@
+## 5.0.0
+
+- Remove `docker_repository_url` variable.
+
 ## 4.0.0
 
 - Add support for Docker Community Edition; includes several breaking changes.
