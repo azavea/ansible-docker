@@ -1,6 +1,7 @@
 ## 5.0.0
 
 - Remove `docker_repository_url` variable.
+- Add `docker_repository_arch` variable.
 
 ## 4.0.0
 
