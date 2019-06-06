@@ -1,9 +1,9 @@
 ---
 - name: Download Docker APT key
-  apt_key: url={{ docker_repository_url }}/gpg id=0EBFCD88 state=present
+  apt_key: url=https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg id=0EBFCD88 state=present
 
 - name: Configure the Docker APT repository
-  apt_repository: repo="deb {{ docker_repository_url }} {{ ansible_distribution_release }} stable"
+  apt_repository: repo="deb [arch={{ docker_repository_arch }}] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable"
                   state=present
 
 - name: Install Docker
