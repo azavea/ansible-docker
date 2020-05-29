@@ -4,7 +4,7 @@ galaxy_info:
   description: An Ansible role for installing Docker.
   company: Azavea Inc.
   license: Apache
-  min_ansible_version: 2.8
+  min_ansible_version: 2.6
   platforms:
     - name: Ubuntu
       versions:
