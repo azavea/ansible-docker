@@ -1,3 +1,11 @@
+## 6.0.0
+
+- Change `docker_package_name` to `docker_packages` to support additional Docker packages.
+- Added `docker_containerd_version` to provide a was to customize the `containerd` version.
+- Added support for Ubuntu Xenial and Buster.
+- Removed support for Ubuntu Trusty.
+- Updated the minimum version of Ansible support to 2.6.x.
+
 ## 5.0.0
 
 - Remove `docker_repository_url` variable.
