@@ -1,5 +1,9 @@
 ---
 docker_repository_arch: "amd64"
-docker_package_name: "docker-ce"
-docker_version: "17.*"
+docker_packages:
+  - "docker-ce={{ docker_version }}"
+  - "docker-ce-cli={{ docker_version }}"
+  - "containerd.io={{ docker_containerd_version }}"
+docker_version: "5:19.*"
+docker_containerd_version: "1.2.*"
 docker_options: ""
