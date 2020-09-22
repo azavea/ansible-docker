@@ -9,6 +9,7 @@
   apt_repository:
     repo: |
       deb [arch={{ docker_repository_arch }}] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable
+    mode: '0600'
     state: present
 
 - name: Install Docker
