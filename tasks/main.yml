@@ -1,4 +1,9 @@
 ---
+- name: Install required packages
+  apt:
+    pkg: "{{ docker_required_packages }}"
+    state: present
+
 - name: Download Docker APT key
   apt_key:
     url: https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg
